@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from './Header.js';
 import Myself from './Myself.js';
+import ProfileLinks from './ProfileLinks.js';
 
 function Home() {
   return (
@@ -8,6 +9,8 @@ function Home() {
         <Header />
 
         <Myself/>
+
+        <ProfileLinks/>
     </div>
   )
 }

@@ -92,9 +92,6 @@ function Myself() {
                 </Grid.Row>
             </Grid>
 
-        
-
-        
 
         </div>
 
