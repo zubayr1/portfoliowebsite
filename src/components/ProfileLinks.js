@@ -1,18 +1,17 @@
 import React from 'react'
-import { Grid } from 'semantic-ui-react'
 
 function ProfileLinks() {
   return (
-    <div style={{backgroundColor:'#dfe3f0', marginTop:'2%'}}>
+    <div style={{backgroundColor:'#dfe3f0', marginTop:'2%', maxWidth:'100%', padding:'2%'}}>
 
-        <Grid centered>
+      <p>LinkedIn: https://www.linkedin.com/in/zubayr-khalid-393257117/</p>
 
-            <Grid.Row>
-                
+      <p>Github: https://github.com/zubayr1</p>
 
-            </Grid.Row>
+      <p>Medium: https://medium.com/@write2zubayr</p>
 
-        </Grid>
+        
+
         
     </div>
   )
