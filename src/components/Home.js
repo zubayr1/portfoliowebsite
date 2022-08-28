@@ -4,10 +4,16 @@ import Myself from './Myself.js';
 import ProfileLinks from './ProfileLinks.js';
 import Skills from './Skills.js';
 
-function Home() {
+function Home({dataParentToChild}) {
+
+  console.log(dataParentToChild);
+
+  
   return (
     <div>
         <Header />
+
+        
 
         <Myself/>
 
