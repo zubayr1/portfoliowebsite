@@ -6,7 +6,7 @@ function ProfileLinks() {
     <div style={{backgroundColor:'#dfe3f0', marginTop:'2%', maxWidth:'100%', padding:'2%'}}>
       
       <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}>
-        <p class="FuturaFont" style={{color:'black', fontSize:'20px', textAlign:'justify', maxWidth:'100%'}}>My Links</p>
+        <p class="FuturaFont" style={{color:'black', fontSize:'24px', textAlign:'justify', maxWidth:'100%'}}>My Links</p>
 
       </div>
 
