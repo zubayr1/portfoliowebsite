@@ -2,6 +2,7 @@ import React from 'react';
 import {BrowserRouter as Router, Routes , Route} from 'react-router-dom'
 import Home from './components/Home.js';
 import Token from './components/Token';
+import Feedback from './components/Feedback.js';
 
 function App() {
   const val ='zake kal'
@@ -10,6 +11,7 @@ function App() {
       <Router>
         <Routes >
           <Route exact path="/" element={<Home dataParentToChild={val}/>}/>
+          <Route exact path="/feedback" element={<Feedback/>}/>
           <Route exact path="/token" element={<Token/>}/>
         </Routes>
       </Router>

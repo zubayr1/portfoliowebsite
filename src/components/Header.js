@@ -2,28 +2,28 @@ import React from 'react'
 import logo from '../assets/logo.png'
 import {  Dropdown, Image, Grid } from 'semantic-ui-react'
 
-function Header() {
+function Header({changeState}) {
+
+
 
   const options = [
-    { key: 1, text: 'Home', value: 1 },
-    { key: 2, text: 'Skills', value: 2 },
-    { key: 3, text: 'Feedback', value: 3 },
-    { key: 4, text: 'Token', value: 4 }
+    { key: 1, text: 'Home', value: 'home' },
+    { key: 2, text: 'Skills', value: 'skills' },
+    { key: 3, text: 'Feedback', value: 'feedback' },
+    { key: 4, text: 'Token', value: 'token' }
   ]
 
-  function dropdownhandler(e, data)
-  {
-    console.log(data.value);
-  }
-
-
+  
   return (
     <div style={{marginLeft:'2%', marginRight:'2%', maxWidth:'100%'}}>
       
       <Grid style={{maxWidth:'90%'}} verticalAlign="middle" >
 
         <Grid.Column mobile={6} tablet={4} computer={4} >
-          <Image src={logo} size='small' />
+          <div onClick={() => changeState('home')}>
+            <Image src={logo} size='small' />
+          </div>
+          
         </Grid.Column>
 
         <Grid.Column only='tablet computer' tablet={12} computer={10}>
@@ -37,11 +37,16 @@ function Header() {
             </Grid.Column>
 
             <Grid.Column>
-              Feedback
+            <div onClick={() => changeState('feedback')}>
+                Feedback
+              </div>
             </Grid.Column>
 
             <Grid.Column>
-              Token
+              <div onClick={() => changeState('token')}>
+                Token
+              </div>
+              
             </Grid.Column>
 
           </Grid>
@@ -50,7 +55,7 @@ function Header() {
         <Grid.Column only='mobile' floated='right'>
             <Dropdown options={options} 
             defaultValue={options[0].value}
-            onChange={dropdownhandler} />
+            onChange={(e, data) => changeState(data.value)} />
             
           </Grid.Column>
 
