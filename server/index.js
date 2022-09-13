@@ -1,18 +1,14 @@
 // server/index.js
+require('dotenv').config()
 
 const express = require("express");
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.SERVERPORT;
 
 const app = express();
 
 
-const http = require('http');
 
-const server = http.createServer((req, res) =>
-{
-    console.log('request made');
-})
 
 app.get("/api", (req, res) => {
     res.json({ message: "Hello from server!" });
