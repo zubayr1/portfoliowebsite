@@ -1,7 +1,5 @@
 import React from 'react'
 
-import my_image from '../assets/my_image.jpg'
-import {  Image } from 'semantic-ui-react'
 
 function Skills() {
   return (
