@@ -7,11 +7,18 @@ const PORT = process.env.SERVERPORT;
 
 const app = express();
 
+//register view engine
+app.set('view engine', 'ejs');
 
 
+app.get("/", (req, res) => {
+  res.render('index');
+  
+});
 
-app.get("/api", (req, res) => {
+app.get("/apis", (req, res) => {
     res.json({ message: "Hello from server!" });
+    
   });
   
   app.listen(PORT, () => {
