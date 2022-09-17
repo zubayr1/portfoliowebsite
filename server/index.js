@@ -32,7 +32,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/apis", (req, res) => {
-    res.json({ message: "Hello from zakeKal!" });
+  res.render('apis');
     
 });
 
