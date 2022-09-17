@@ -190,6 +190,7 @@ function Myself() {
                     <p class="FuturaFont" style={{color:'black', fontSize:'16px', textAlign:'justify', maxWidth:'100%'}}>
                         Naahhh, I don't wanna waste your time on more textual descriptions. I have made this website from scratch with 
                         React js. I have included most of the stuff, such as interaction with 
+                        <p style={{display:"inline", color:'#FE560C'}}> MERN</p>,
                         <p style={{display:"inline", color:'#FE560C'}}> Google Firebase</p>, 
                         <p style={{display:"inline", color:'#FE560C'}}> Etherjs</p> to interact with 
                         <p style={{display:"inline", color:'#FE560C'}}> Rinkebey test network</p> herewith.
