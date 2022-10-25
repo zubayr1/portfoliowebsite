@@ -1,10 +1,13 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Header from './Header.js';
 import { useNavigate } from 'react-router-dom';
 import {Grid, Button, Form, Segment} from 'semantic-ui-react';
 
 function Feedback() {
     const navigate = useNavigate();
+
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
     
     const changeState = (childdata) => {    
     
@@ -14,6 +17,11 @@ function Feedback() {
         navigate("/feedback");
         if(childdata==='token')
         navigate("/token");  
+      }
+
+      const registrationHandler = () =>
+      {
+        console.log(username);
       }
 
     let formdisplay
@@ -26,14 +34,14 @@ function Feedback() {
             <Form>
               <Form.Field>
                 <label>First Name</label>
-                <input placeholder='First Name' />
+                <input placeholder='First Name' onChange={(e)=>setUsername(e.target.value)}/>
               </Form.Field>
               <Form.Field>
                 <label>Last Name</label>
-                <input placeholder='Last Name' />
+                <input placeholder='Last Name' onChange={(e)=>setPassword(e.target.value)}/>
               </Form.Field>
               
-              <Button type='submit'>Register with Firebase</Button>
+              <Button inverted color='blue' type='submit' onClick={registrationHandler}>Register with Firebase</Button>
             </Form>
         </Grid.Column>
       </Grid>
