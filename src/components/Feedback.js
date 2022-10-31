@@ -8,6 +8,13 @@ function Feedback() {
 
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const [confirmpassword, setConfirmPassword] = useState("");
+
+    const [name, setName] = useState("");
+
+    const [feedback, setFeedback] = useState("");
+
+    const [checkLogin, setCheckLogin] = useState(0);
     
     const changeState = (childdata) => {    
     
@@ -21,32 +28,111 @@ function Feedback() {
 
       const registrationHandler = () =>
       {
-        console.log(username);
+        if(username!=="" && password!=="")
+        {
+          if(password === confirmpassword)
+          {
+            setCheckLogin(1);
+          }
+        }
+        
+      }
+
+      const loginHandler = () =>
+      {
+        if(username!=="" && password!=="")
+        {
+          setCheckLogin(2);
+        }
+        
+      }
+
+
+      const feedbackHandler = () =>
+      {
+        console.log(name, feedback);
+        
       }
 
     let formdisplay
 
-    formdisplay = 
+    if(checkLogin===0)
+    {
+      formdisplay = 
+      <div style={{marginTop:'2%', marginLeft: "5%", marginRight:"5%"}}>
+        <Segment>
+        <Grid centered>
+          <Grid.Column>
+              <Form>
+                <Form.Field>
+                  <label>UserName</label>
+                  <input placeholder='UserName' onChange={(e)=>setUsername(e.target.value)} required/>
+                </Form.Field>
+                <Form.Field>
+                  <label>Password</label>
+                  <input placeholder='Password' onChange={(e)=>setPassword(e.target.value)} required/>
+                </Form.Field>
+
+                <Form.Field>
+                  <label>Confirm Password</label>
+                  <input placeholder='Confirm Password' onChange={(e)=>setConfirmPassword(e.target.value)} required/>
+                </Form.Field>
+                
+                <Button inverted color='blue' type='submit' onClick={registrationHandler}>Register with Firebase</Button>
+              </Form>
+          </Grid.Column>
+        </Grid>
+        </Segment>
+      </div>
+    }
+    else if(checkLogin===1)
+    {
+      formdisplay = 
+      <div style={{marginTop:'2%', marginLeft: "5%", marginRight:"5%"}}>
+        <Segment>
+        <Grid centered>
+          <Grid.Column>
+              <Form>
+                <Form.Field>
+                  <label>UserName</label>
+                  <input placeholder='UserName' onChange={(e)=>setUsername(e.target.value)} required/>
+                </Form.Field>
+                <Form.Field>
+                  <label>Password</label>
+                  <input placeholder='Password' onChange={(e)=>setPassword(e.target.value)} required/>
+                </Form.Field>
+
+                <Button inverted color='blue' type='submit' onClick={loginHandler}>Login with Firebase</Button>
+              </Form>
+          </Grid.Column>
+        </Grid>
+        </Segment>
+      </div>
+    }
+    else
+    {
+      formdisplay = 
     <div style={{marginTop:'2%', marginLeft: "5%", marginRight:"5%"}}>
       <Segment>
       <Grid centered>
         <Grid.Column>
             <Form>
               <Form.Field>
-                <label>First Name</label>
-                <input placeholder='First Name' onChange={(e)=>setUsername(e.target.value)}/>
+                <label>Name</label>
+                <input placeholder='Name' onChange={(e)=>setName(e.target.value)} required/>
               </Form.Field>
               <Form.Field>
-                <label>Last Name</label>
-                <input placeholder='Last Name' onChange={(e)=>setPassword(e.target.value)}/>
+                <label>Feedback</label>
+                <input placeholder='Feedback' onChange={(e)=>setFeedback(e.target.value)} required/>
               </Form.Field>
-              
-              <Button inverted color='blue' type='submit' onClick={registrationHandler}>Register with Firebase</Button>
+
+              <Button inverted color='blue' type='submit' onClick={feedbackHandler}>Send Feedback</Button>
             </Form>
         </Grid.Column>
       </Grid>
       </Segment>
     </div>
+    }
 
   return (
     <div>
