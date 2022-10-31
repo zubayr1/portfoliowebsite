@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import Header from './Header.js';
 import { useNavigate } from 'react-router-dom';
-import {Grid, Button, Form, Segment} from 'semantic-ui-react';
+import {Grid, Button, Form, Segment, TextArea} from 'semantic-ui-react';
 
 function Feedback() {
     const navigate = useNavigate();
@@ -127,7 +127,7 @@ function Feedback() {
                 </Form.Field>
                 <Form.Field>
                   <label>Feedback</label>
-                  <input onFocus={false} value={" "} placeholder='Feedback' onChange={(e)=>setFeedback(e.target.value)} required/>
+                  <TextArea onFocus={false} value={" "} placeholder='Feedback' onChange={(e)=>setFeedback(e.target.value)} required/>
                 </Form.Field>
 
                 <Button inverted color='blue' type='submit' onClick={feedbackHandler}>Send Feedback</Button>
