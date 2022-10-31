@@ -28,7 +28,7 @@ function Feedback() {
 
       const registrationHandler = () =>
       {
-        if(username!=="" && password!=="")
+        if(username!=="" && password!=="" && username!==" " && password!==" ")
         {
           if(password === confirmpassword)
           {
@@ -40,7 +40,7 @@ function Feedback() {
 
       const loginHandler = () =>
       {
-        if(username!=="" && password!=="")
+        if(username!=="" && password!=="" && username!==" " && password!==" ")
         {
           setCheckLogin(2);
         }
@@ -50,7 +50,11 @@ function Feedback() {
 
       const feedbackHandler = () =>
       {
-        console.log(name, feedback);
+        if(username!=="" && password!=="" && username!==" " && password!==" ")
+        {
+          console.log(name, feedback);
+        }
+        
         
       }
 
@@ -112,26 +116,26 @@ function Feedback() {
     else
     {
       formdisplay = 
-    <div style={{marginTop:'2%', marginLeft: "5%", marginRight:"5%"}}>
-      <Segment>
-      <Grid centered>
-        <Grid.Column>
-            <Form>
-              <Form.Field>
-                <label>Name</label>
-                <input placeholder='Name' onChange={(e)=>setName(e.target.value)} required/>
-              </Form.Field>
-              <Form.Field>
-                <label>Feedback</label>
-                <input placeholder='Feedback' onChange={(e)=>setFeedback(e.target.value)} required/>
-              </Form.Field>
+      <div style={{marginTop:'2%', marginLeft: "5%", marginRight:"5%"}}>
+        <Segment>
+        <Grid centered>
+          <Grid.Column>
+              <Form>
+                <Form.Field>
+                  <label>Name</label>
+                  <input onFocus={false} value={" "} placeholder='Name' onChange={(e)=>setName(e.target.value)} required/>
+                </Form.Field>
+                <Form.Field>
+                  <label>Feedback</label>
+                  <input onFocus={false} value={" "} placeholder='Feedback' onChange={(e)=>setFeedback(e.target.value)} required/>
+                </Form.Field>
 
-              <Button inverted color='blue' type='submit' onClick={feedbackHandler}>Send Feedback</Button>
-            </Form>
-        </Grid.Column>
-      </Grid>
-      </Segment>
-    </div>
+                <Button inverted color='blue' type='submit' onClick={feedbackHandler}>Send Feedback</Button>
+              </Form>
+          </Grid.Column>
+        </Grid>
+        </Segment>
+      </div>
     }
 
   return (
