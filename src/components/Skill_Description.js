@@ -41,6 +41,36 @@ if (selectedSkillIndex===1)
         <p style={{fontSize: "20px"}}>Freelance Applicaiton: Zollo<a href="https://github.com/zubayr1/zollo"> link</a></p>
         <p style={{fontSize: "20px"}}>Practice: React Router<a href="https://github.com/zubayr1/React_router"> link</a></p>
     </div>
+
+    const username = 'zubayr1';
+    const repository = 'portfoliowebsite';
+
+    fetch(`https://api.github.com/repos/${username}/${repository}/commits`)
+    .then((response) => response.json())
+    .then((commits) => {
+        // Create an object to store commit counts per year
+        const commitCountsByYear = {};
+
+        // Process the list of commits
+        commits.forEach((commit) => {
+        const commitDate = new Date(commit.commit.author.date);
+        const year = commitDate.getFullYear();
+
+        // Initialize the count for the year if it doesn't exist
+        if (!commitCountsByYear[year]) {
+            commitCountsByYear[year] = 0;
+        }
+
+        // Increment the commit count for the year
+        commitCountsByYear[year]++;
+        });
+
+        // Log the commit counts per year
+        console.log(commitCountsByYear);
+    })
+    .catch((error) => {
+        console.error('Error fetching commits:', error);
+    });
 }
 
 if (selectedSkillIndex===2)
