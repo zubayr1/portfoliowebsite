@@ -1,4 +1,4 @@
-import React from 'react'
+import React  from 'react';
 import logo from '../assets/logo.png'
 import {  Dropdown, Image, Grid } from 'semantic-ui-react'
 
@@ -41,7 +41,7 @@ function Header({changeState}) {
             </Grid.Column>
 
             <Grid.Column>
-              <div style={styles.hoverable}>
+              <div onClick={() => changeState('skills')} style={styles.hoverable}>
                 Skills
               </div>              
             </Grid.Column>

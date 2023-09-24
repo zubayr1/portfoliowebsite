@@ -2,6 +2,9 @@ import React, {useState} from 'react'
 import Header from './Header.js';
 import { useNavigate } from 'react-router-dom';
 import {Grid, Button, Form, Segment, TextArea} from 'semantic-ui-react';
+import Footer from './Footer.js';
+
+import "./footer.css";
 
 function Feedback() {
     const navigate = useNavigate();
@@ -143,6 +146,10 @@ function Feedback() {
         <Header changeState={changeState}/>
         
         {formdisplay}
+
+        <div class="footer">
+          <Footer/>
+        </div>
     </div>
   )
 }

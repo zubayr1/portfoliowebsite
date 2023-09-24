@@ -1,6 +1,10 @@
 import React from 'react'
 import Header from './Header.js';
 import { useNavigate } from 'react-router-dom';
+import Footer from './Footer.js';
+
+import "./footer.css";
+
 
 function Token() {
   const navigate = useNavigate();
@@ -20,6 +24,10 @@ function Token() {
     <div>
         <Header changeState={changeState}/>
         token
+
+        <div class="footer">
+          <Footer/>
+        </div>
     </div>
   )
 }

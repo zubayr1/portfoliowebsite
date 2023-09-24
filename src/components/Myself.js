@@ -65,14 +65,14 @@ function Myself() {
                     </p>
 
                     <p class="FuturaFont" style={{color:'black', fontSize:'16px', textAlign:'justify', maxWidth:'100%'}}>
-                                I am fascinated about the idea of blockchain, cryptocurrency and the overall web3 concept. At the time of writing this 
-                                document, its still quite early for the <p style={{display:"inline", color:'#FE560C'}}> Ethereum Merge </p>,
-                                but I can't wait for this to happen!!
+                                    I am fascinated about the idea of blockchain, cryptocurrency and the overall web3 concept. I believe Web3 especially 
+                                     <p style={{display:"inline", color:'#FE560C'}}> Defi and DAO </p>, have great potential,
+                                    and I can't wait to see what future holds!!
 
                     </p>
 
                     <p class="FuturaFont" style={{color:'black', fontSize:'16px', textAlign:'justify', maxWidth:'100%'}}>
-                               I am also interested in full stack development, cloud services and fundamental coding.
+                               I am very much interested in full stack development, Software development, cloud services and fundamental coding.
                     </p>
 
                     <p class="FuturaFont" style={{color:'black', fontSize:'16px', textAlign:'justify', maxWidth:'100%'}}>
@@ -139,14 +139,14 @@ function Myself() {
                         </p>
 
                         <p class="FuturaFont" style={{color:'black', fontSize:'16px', textAlign:'justify', maxWidth:'100%'}}>
-                                    I am fascinated about the idea of blockchain, cryptocurrency and the overall web3 concept. At the time of writing this 
-                                    document, its still quite early for the <p style={{display:"inline", color:'#FE560C'}}> Ethereum Merge </p>,
-                                    but I can't wait for this to happen!!
+                                    I am fascinated about the idea of blockchain, cryptocurrency and the overall web3 concept. I believe Web3 especially 
+                                     <p style={{display:"inline", color:'#FE560C'}}> Defi and DAO </p>, have great potential,
+                                    and I can't wait to see what future holds!!
 
                         </p>
 
                         <p class="FuturaFont" style={{color:'black', fontSize:'16px', textAlign:'justify', maxWidth:'100%'}}>
-                                   I am also interested in full stack development, cloud services and fundamental coding.
+                                   I am also interested in full stack development, Software development, cloud services and fundamental coding.
                         </p>
 
                         <p class="FuturaFont" style={{color:'black', fontSize:'16px', textAlign:'justify', maxWidth:'100%'}}>

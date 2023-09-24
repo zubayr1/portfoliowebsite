@@ -7,6 +7,7 @@ import aws from '../assets/aws.png';
 import azure from '../assets/azure.png';
 import firebase from '../assets/firebase.png';
 import mongodb from '../assets/mongodb.png';
+import rust from '../assets/rust.png';
 import solidity from '../assets/solidity.png';
 import java from '../assets/java.png';
 
@@ -84,6 +85,7 @@ function Carousol({ onImageClick }) {
       { src: azure },
       { src: firebase },
       { src: mongodb },
+      { src: rust },
       { src: solidity },
       { src: java },
     ];

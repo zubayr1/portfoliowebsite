@@ -1,0 +1,15 @@
+  .footer {
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(6, 6, 45);
+  }
+
+  .footer_home {    
+    background-color: rgb(6, 6, 45);
+  }
+
+  .container{
+    position: relative;
+    min-height: 100vh;
+  }

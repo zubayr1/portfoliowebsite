@@ -3,6 +3,7 @@
 .skill-description-container {
   background: linear-gradient(to bottom, #98b5d6, #d5dfeb);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 2%;
