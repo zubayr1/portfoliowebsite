@@ -5,6 +5,9 @@ function Skill_Description({ selectedIndex }) {
 
 const [selectedSkillIndex, setSelectedSkillIndex] = useState(localStorage.getItem('selectedSkillIndex') || 0);
 
+const [totalCommit, setTotalCommit] = useState({});
+
+
 useEffect(() => {
     // Update selectedSkillIndex whenever selectedIndex changes
     setSelectedSkillIndex(selectedIndex);
@@ -13,6 +16,88 @@ useEffect(() => {
   useEffect(() => {
     // Store selectedSkillIndex in localStorage whenever it changes
     localStorage.setItem('selectedSkillIndex', selectedSkillIndex);
+
+
+    const username = 'zubayr1';
+
+    let repositories = [];
+
+    if (selectedSkillIndex===1)
+    {
+        repositories = ['portfoliowebsite', 'NFT', 'cv_blockchain', 'zollo', 'React_router'];
+    }
+    if (selectedSkillIndex===2)
+    {
+        repositories = ['portfoliowebsite', 'NFT', 'cv_blockchain', 'zollo', 'React_router'];
+    }
+    
+    if (selectedSkillIndex===3)
+    {
+        repositories = ['matching-algorithm'];
+    }
+    if (selectedSkillIndex===4)
+    {
+        repositories = ['NLP_Project_2021', 'codes'];
+    }
+    if (selectedSkillIndex===5)
+    {
+        repositories = ['matching-algorithm', 'rustMainWorks'];
+    }
+    if (selectedSkillIndex===6)
+    {
+        repositories = ['matching-algorithm'];
+    }
+    if (selectedSkillIndex===7)
+    {
+        repositories = ['cv_blockchain', 'NFT', 'portfoliowebsite'];
+    }
+    if (selectedSkillIndex===8)
+    {
+        repositories = ['matching-algorithm'];
+    }
+    if (selectedSkillIndex===9)
+    {
+        repositories = ['rust_merkle_tree', 'rustMainWorks'];
+    }
+    if (selectedSkillIndex===10)
+    {
+        repositories = ['matching-algorithm', 'NFT'];
+    }
+    if (selectedSkillIndex===11)
+    {
+        repositories = ['oli'];
+    }
+
+    
+    
+
+    const fetchData = async () => {
+        let total_commit = {};
+  
+        for (const repository of repositories) {
+          try {
+            const commits = await get_git_commit(username, repository);
+            
+            for (const year in commits) {
+              if (!total_commit[year]) {
+                total_commit[year] = 0;
+              }
+              total_commit[year] += commits[year];
+            }
+          } catch (error) {
+            console.error('Error:', error);
+          }
+        }
+  
+        // Set the state with the accumulated data
+        setTotalCommit(total_commit);
+
+        console.log(total_commit)
+
+      };
+  
+      fetchData();
+    
   }, [selectedSkillIndex]);
 
   useEffect(() => {
@@ -21,6 +106,33 @@ useEffect(() => {
       setSelectedSkillIndex(parseInt(storedSelectedSkillIndex));
     }
   }, []);
+
+
+  const get_git_commit = async (username, repository) => {
+    try {
+      const response = await fetch(`https://api.github.com/repos/${username}/${repository}/commits`);
+      const commits = await response.json();
+  
+      const commitCountsByYear = {};
+  
+      commits.forEach((commit) => {
+        const commitDate = new Date(commit.commit.author.date);
+        const year = commitDate.getFullYear();
+  
+        if (!commitCountsByYear[year]) {
+          commitCountsByYear[year] = 0;
+        }
+  
+        commitCountsByYear[year]++;
+      });
+  
+      return commitCountsByYear;
+    } catch (error) {
+      console.error('Error fetching commits:', error);
+      throw error;
+    }
+  };
+  
 
 
 let content;
@@ -42,35 +154,8 @@ if (selectedSkillIndex===1)
         <p style={{fontSize: "20px"}}>Practice: React Router<a href="https://github.com/zubayr1/React_router"> link</a></p>
     </div>
 
-    const username = 'zubayr1';
-    const repository = 'portfoliowebsite';
-
-    fetch(`https://api.github.com/repos/${username}/${repository}/commits`)
-    .then((response) => response.json())
-    .then((commits) => {
-        // Create an object to store commit counts per year
-        const commitCountsByYear = {};
-
-        // Process the list of commits
-        commits.forEach((commit) => {
-        const commitDate = new Date(commit.commit.author.date);
-        const year = commitDate.getFullYear();
-
-        // Initialize the count for the year if it doesn't exist
-        if (!commitCountsByYear[year]) {
-            commitCountsByYear[year] = 0;
-        }
-
-        // Increment the commit count for the year
-        commitCountsByYear[year]++;
-        });
-
-        // Log the commit counts per year
-        console.log(commitCountsByYear);
-    })
-    .catch((error) => {
-        console.error('Error fetching commits:', error);
-    });
+    
+    
 }
 
 if (selectedSkillIndex===2)
@@ -193,6 +278,18 @@ return (
 
         <div style={{padding: "2%"}}>
             {content}
+        </div>
+
+        <div style={{padding: "2%"}}>
+            <h2>Commit Counts by Year</h2>
+            <div style={{ display: 'flex', flexDirection: 'row' }}>
+                {Object.entries(totalCommit).map(([year, count]) => (
+                <div key={year} style={{ margin: '10px', textAlign: 'center' }}>
+                    <div>{year}</div>
+                    <div>{count}</div>
+                </div>
+                ))}
+            </div>
         </div>
     </div>
 )
