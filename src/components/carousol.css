@@ -1,0 +1,26 @@
+/* Carousol.css */
+
+/* Add a CSS class to the images to target them specifically */
+.carousel-image {
+    transition: transform 0.3s ease;
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Apply a scaling transformation and higher z-index when hovering over the images */
+  .carousel-image:hover {
+    transform: scale(1.07); /* Adjust the scale factor as needed (1.1 for 110% size) */
+    z-index: 1; /* Add a higher z-index for the hovered image */
+  }
+  
+  /* Set the parent container's dimensions to accommodate the larger hovered images */
+  .carousel-container {
+    width: auto; /* Adjust the width as needed */
+    height: auto; /* Allow the height to adjust automatically */
+    overflow: hidden; /* Hide any parts of the images that exceed the container */
+    display: inline-block;
+
+  }
+
+  
+  

@@ -2,10 +2,16 @@ import React from 'react'
 import logo from '../assets/logo.png'
 import {  Dropdown, Image, Grid } from 'semantic-ui-react'
 
+
+const styles = {
+  hoverable: {
+    cursor: 'pointer', 
+  },
+};
+
+
 function Header({changeState}) {
-
-
-
+  
   const options = [
     { key: 1, text: 'Home', value: 'home' },
     { key: 2, text: 'Skills', value: 'skills' },
@@ -19,8 +25,8 @@ function Header({changeState}) {
       
       <Grid style={{maxWidth:'90%'}} verticalAlign="middle" >
 
-        <Grid.Column mobile={6} tablet={4} computer={4} >
-          <div onClick={() => changeState('home')}>
+        <Grid.Column mobile={6} tablet={4} computer={4}>
+          <div onClick={() => changeState('home')} style={styles.hoverable}>
             <Image src={logo} size='small' />
           </div>
           
@@ -29,21 +35,25 @@ function Header({changeState}) {
         <Grid.Column only='tablet computer' tablet={12} computer={10}>
           <Grid columns='equal'>
             <Grid.Column>
-              Home
+              <div onClick={() => changeState('home')} style={styles.hoverable}>
+                Home
+              </div>
             </Grid.Column>
 
             <Grid.Column>
-              Skills
+              <div style={styles.hoverable}>
+                Skills
+              </div>              
             </Grid.Column>
 
             <Grid.Column>
-            <div onClick={() => changeState('feedback')}>
+            <div onClick={() => changeState('feedback')} style={styles.hoverable}>
                 Feedback
               </div>
             </Grid.Column>
 
             <Grid.Column>
-              <div onClick={() => changeState('token')}>
+              <div onClick={() => changeState('token')} style={styles.hoverable}>
                 Token
               </div>
               

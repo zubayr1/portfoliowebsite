@@ -1,13 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react';
 import Header from './Header.js';
 import Myself from './Myself.js';
 import ProfileLinks from './ProfileLinks.js';
-import Skills from './Skills.js';
+import Carousol from './Carousol.js';
+
+
 import { useNavigate } from 'react-router-dom';
+
+// eslint-disable-next-line
+import Skilldescription from './Skill_Description.js';
 
 function Home({dataParentToChild}) {
 
-  
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
   const navigate = useNavigate();
 
 
@@ -21,18 +27,25 @@ function Home({dataParentToChild}) {
     navigate("/token"); 
   }
 
+  const handleImageClick = (index) => {
+
+    console.log('Index received from child:', index);
+    setSelectedIndex(index);
+
+  };
   
   return (
     <div>
-        <Header changeState={changeState}/>
-
-        
+        <Header changeState={changeState}/>        
 
         <Myself/>
 
         <ProfileLinks/>
 
-        <Skills/>
+
+        <Carousol onImageClick={handleImageClick} />
+
+        <Skilldescription selectedIndex={selectedIndex}/>
     </div>
   )
 }

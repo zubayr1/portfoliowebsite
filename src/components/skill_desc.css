@@ -1,0 +1,17 @@
+/* skill_desc.css */
+
+.skill-description-container {
+  background: linear-gradient(to bottom, #98b5d6, #d5dfeb);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
+}
+
+.skill-description-text {
+  color: #000000;
+  font-size: 24px;
+  margin-right: 10px; /* Adjust as needed for spacing */
+}
+
+
