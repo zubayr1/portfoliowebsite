@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import "./skill_desc.css";
+import Plot from 'react-plotly.js';
 
 function Skill_Description({ selectedIndex }) {
 
@@ -131,6 +132,25 @@ useEffect(() => {
       console.error('Error fetching commits:', error);
       throw error;
     }
+  };
+
+
+  const years = Object.keys(totalCommit);
+  const counts = Object.values(totalCommit);
+
+  const data = [
+    {
+      x: years,
+      y: counts,
+      type: 'bar',
+      marker: { color: 'rgb(0, 102, 204)' },
+    },
+  ];
+
+  const layout = {
+    title: 'Commit Counts by Year (based on actual data)',
+    xaxis: { title: 'Year' },
+    yaxis: { title: 'Commit Count' },
   };
   
 
@@ -280,15 +300,9 @@ return (
             {content}
         </div>
 
-        <div style={{padding: "2%"}}>
-            <h2>Commit Counts by Year</h2>
+        <div style={{padding: "2%"}}>            
             <div style={{ display: 'flex', flexDirection: 'row' }}>
-                {Object.entries(totalCommit).map(([year, count]) => (
-                <div key={year} style={{ margin: '10px', textAlign: 'center' }}>
-                    <div>{year}</div>
-                    <div>{count}</div>
-                </div>
-                ))}
+                <Plot data={data} layout={layout} />
             </div>
         </div>
     </div>
