@@ -10,6 +10,7 @@ import Documents from './Documents.js';
 import Footer from './Footer.js';
 
 import "./footer.css";
+import Work from './Work.js';
 
 function Home({dataParentToChild}) {
 
@@ -39,7 +40,7 @@ function Home({dataParentToChild}) {
   };
   
   return (
-    <div class='container'>
+    <div class='container' style={{overflowX: "hidden"}}>
       <Header changeState={changeState}/>        
 
       <Myself/>
@@ -53,6 +54,8 @@ function Home({dataParentToChild}) {
       <Skilldescription selectedIndex={selectedIndex} />
 
       <Documents/>
+
+      <Work/>
 
       <div class="footer_home">
         <Footer/>

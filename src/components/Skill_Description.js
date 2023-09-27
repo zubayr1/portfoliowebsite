@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "./skill_desc.css";
 import Plot from 'react-plotly.js';
+import { Grid,   } from 'semantic-ui-react'
 
 function Skill_Description({ selectedIndex }) {
 
@@ -152,6 +153,12 @@ useEffect(() => {
     xaxis: { title: 'Year' },
     yaxis: { title: 'Commit Count' },
   };
+
+  const layout_mobile = {
+    title: 'Commit Counts vs Year',
+    xaxis: { title: 'Year' },
+    yaxis: { title: 'Commit Count' },
+  };
   
 
 
@@ -300,11 +307,32 @@ return (
             {content}
         </div>
 
-        <div style={{padding: "2%"}}>            
-            <div style={{ display: 'flex', flexDirection: 'row' }}>
-                <Plot data={data} layout={layout} />
-            </div>
-        </div>
+        <Grid>
+            <Grid.Row only='computer tablet'>
+
+                <div style={{padding: "2%"}}>            
+                    <div style={{ display: 'flex', flexDirection: 'row' }}>
+                        <Plot data={data} layout={layout} />
+                    </div>
+                </div>
+
+            </Grid.Row>
+
+            <Grid.Row only='mobile'>
+
+                <Grid.Column>
+                    <div style={{padding: "2%"}}>            
+                        <div style={{ display: 'flex', flexDirection: 'row' , maxWidth: "80%"}}>
+                            <Plot data={data} layout={layout_mobile} style={{width: "80%"}}/>
+                        </div>
+                    </div>
+                </Grid.Column>
+
+            </Grid.Row>
+
+        </Grid>
+
+        
     </div>
 )
 }

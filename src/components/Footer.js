@@ -58,7 +58,7 @@ function Footer() {
 
             </div>            
 
-            <div style={{paddingBottom: "1%"}}>
+            <div style={{paddingBottom: "1%", overflow: "hidden"}}>
                 <Grid centered>
                     <Grid.Row only='mobile'>
                         <h3 style={{color: "GrayText"}}>Tools used to generate this applicaiton</h3>
