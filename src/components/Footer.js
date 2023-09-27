@@ -1,6 +1,7 @@
 import React from 'react'
-import { Grid } from 'semantic-ui-react'
-import { Icon } from 'semantic-ui-react'
+import { Grid, Image, Icon } from 'semantic-ui-react'
+import linkedin_logo from '../assets/linkedin_logo.png'
+import medium_logo from '../assets/medium_logo.png'
 
 function Footer() {
   return (
@@ -26,7 +27,26 @@ function Footer() {
                         </Grid.Column>
 
                         <Grid.Column width={8} centered>
-                            <h3 style={{color: "GrayText", textAlign: "center"}}>@Copyright: Zubayr Khalid</h3>                        
+                            <Grid centered>
+                                <Grid.Row>
+                                    <h3 style={{color: "GrayText", textAlign: "center"}}>@Copyright: Zubayr Khalid</h3> 
+                                </Grid.Row>
+
+                                <Grid.Row>
+                                    <Grid.Column width={2}>
+                                        <a href="https://www.linkedin.com/in/zubayr-khalid-393257117/">
+                                            <Image src={linkedin_logo} style={{width:"80%"}}/>
+                                        </a>
+                                    </Grid.Column>
+
+                                    <Grid.Column width={2}>
+                                        <a href="https://medium.com/@write2zubayr">
+                                            <Image  src={medium_logo}  style={{width:"80%"}}/>
+                                        </a>
+                                    </Grid.Column>
+                                </Grid.Row>
+                            </Grid>
+                                                   
 
                         </Grid.Column>
 
@@ -87,6 +107,25 @@ function Footer() {
                     <Grid.Row only='mobile'>
                         <h3 style={{color: "GrayText", textAlign: "center"}}>@Copyright: Zubayr Khalid</h3>  
 
+                    </Grid.Row>
+                    
+
+                    <Grid.Row only='mobile'>
+
+                        <Grid centered>
+                            <Grid.Column width={2}>
+                                <a href="https://www.linkedin.com/in/zubayr-khalid-393257117/">
+                                <Image src={linkedin_logo} style={{width:"100%"}}/>
+                                </a>
+                            </Grid.Column>
+
+                            <Grid.Column width={2}>
+                                <a href="https://medium.com/@write2zubayr">
+                                    <Image  src={medium_logo}  style={{width:"100%"}}/>
+                                </a>
+                            </Grid.Column>
+                        </Grid>
+                        
                     </Grid.Row>
 
                 </Grid>
