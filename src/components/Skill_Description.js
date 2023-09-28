@@ -94,8 +94,6 @@ useEffect(() => {
         // Set the state with the accumulated data
         setTotalCommit(total_commit);
 
-        console.log(total_commit)
-
       };
   
       fetchData();

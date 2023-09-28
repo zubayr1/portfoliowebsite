@@ -19,7 +19,9 @@ function Work() {
                 
                 <div className="container">
                     <Image src={special_work} alt="Snow" style={{width:"100%"}}/>
-                    <Button className="btn" color='orange' >Go to Site</Button>
+                    <a href='https://master--stalwart-truffle-69f6c0.netlify.app/'>
+                        <Button className="btn" color='orange' >Go to Site</Button>
+                    </a>
                 </div>
 
             </Grid.Column>
@@ -40,7 +42,9 @@ function Work() {
 
             <Grid.Row only='mobile' centered>
                 <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', marginTop: "0%", marginBottom: "1%"}}>
-                    <Button color='orange' >Go to Site</Button>
+                    <a href='https://master--stalwart-truffle-69f6c0.netlify.app/'>
+                        <Button color='orange' >Go to Site</Button>
+                    </a>
                 </div>                
             </Grid.Row>
         </Grid>

@@ -1,4 +1,4 @@
-import React  from 'react';
+import React, { useState, useEffect } from 'react';
 import logo from '../assets/logo.png'
 import {  Dropdown, Image, Grid } from 'semantic-ui-react'
 
@@ -18,6 +18,16 @@ function Header({changeState}) {
     { key: 3, text: 'Feedback', value: 'feedback' },
     { key: 4, text: 'Token', value: 'token' }
   ]
+
+  const [selectedOption, setSelectedOption] = useState(options[0].value);
+
+  // useEffect(() => {
+  //   changeState(selectedOption);
+  // }, [selectedOption]);
+
+  const changeDropDownState = (newValue) => {
+    setSelectedOption(newValue);
+  };
 
   
   return (
@@ -64,8 +74,8 @@ function Header({changeState}) {
 
         <Grid.Column only='mobile' floated='right'>
             <Dropdown options={options} 
-            defaultValue={options[0].value}
-            onChange={(e, data) => changeState(data.value)} />
+            value={selectedOption} 
+            onChange={(e, data) => changeDropDownState(data.value)} />
             
           </Grid.Column>
 

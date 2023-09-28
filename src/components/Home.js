@@ -22,7 +22,7 @@ function Home({dataParentToChild}) {
 
 
   const changeState = (childdata) => {    
-    console.log(childdata)
+
     if(childdata==='home' )
     navigate("/");
     if(childdata==='skills' )
