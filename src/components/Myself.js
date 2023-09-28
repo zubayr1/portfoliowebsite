@@ -1,40 +1,44 @@
 import React, {useState} from 'react'
-import {  Image, Grid } from 'semantic-ui-react'
+import {  Image, Grid, Button } from 'semantic-ui-react'
 import my_image from '../assets/my_image.jpg'
 import  './floating.css'
+import '../index.css';
 
 function Myself() {
 
     const [seemore, setSeeMore] = useState(0);
 
+    
     let smallvalue = 
     <div>
         <Grid style={{marginLeft:'1%'}}>
                     
                     <Grid.Row>
-                    <p class="FuturaFont" style={{color:'black', fontSize:'32px', textAlign:'justify', maxWidth:'100%'}}>
-                        Zubayr Khalid
-
-                    </p>
-
+                        <h3 class="roboto-font" style={{color:'black', fontSize:'32px', textAlign:'justify', maxWidth:'100%'}}>
+                            Zubayr Khalid
+                        </h3>
                     </Grid.Row>
 
                     <Grid.Row>
+                        <p class="roboto-font" style={{color:'black', fontSize:'16px', textAlign:'justify', maxWidth:'100%'}}>
+                                    I am just a person crazy enough to be motivated by a lots of cool stuff. 
+                        </p>
 
-                    <p class="FuturaFont" style={{color:'black', fontSize:'16px', textAlign:'justify', maxWidth:'100%'}}>
-                                I am just a person crazy enough to be motivated by a lots of cool stuff. 
-                    </p>
+                        <p class="roboto-font" style={{color:'black', fontSize:'16px', textAlign:'justify', maxWidth:'100%'}}>
+                                    First of all, I really like working on <p style={{display:"inline", color:'#FE560C'}}>innovative things! </p>
+                                    This include writing a new piece of code with Python as well as trying a new recipe!!
+                        </p>
 
-                    <p class="FuturaFont" style={{color:'black', fontSize:'16px', textAlign:'justify', maxWidth:'100%'}}>
-                                First of all, I really like working on <p style={{display:"inline", color:'#FE560C'}}>innovative things! </p>
-                                This include writing a new piece of code with Python as well as trying a new recipe!!
-                    </p>
-
-                    <div onClick={() => setSeeMore(1)}>
-                        <p>see more ...</p>
-                    </div>
-                    
+                        <div onClick={() => setSeeMore(1)}>
+                            <p>see more ...</p>
+                        </div>                 
                         
+                    </Grid.Row>
+
+                    <Grid.Row centered>
+                        <a href='https://www.linkedin.com/in/zubayr-khalid-393257117/'>
+                            <Button color='black'>Get in Touch</Button>
+                        </a>
                     </Grid.Row>
                 
             </Grid>
@@ -46,49 +50,51 @@ function Myself() {
         <Grid style={{marginLeft:'1%'}}>
                     
                     <Grid.Row>
-                    <p class="FuturaFont" style={{color:'black', fontSize:'32px', textAlign:'justify', maxWidth:'100%'}}>
-                        Zubayr Khalid
-
-                    </p>
-
+                        <h3 class="roboto-font" style={{color:'black', fontSize:'32px', textAlign:'justify', maxWidth:'100%'}}>
+                            Zubayr Khalid
+                        </h3>
                     </Grid.Row>
 
                     <Grid.Row>
+                        <p class="roboto-font" style={{color:'black', fontSize:'16px', textAlign:'justify', maxWidth:'100%'}}>
+                                    I am just a person crazy enough to be motivated by a lots of cool stuff. 
+                        </p>
 
-                    <p class="FuturaFont" style={{color:'black', fontSize:'16px', textAlign:'justify', maxWidth:'100%'}}>
-                                I am just a person crazy enough to be motivated by a lots of cool stuff. 
-                    </p>
+                        <p class="roboto-font" style={{color:'black', fontSize:'16px', textAlign:'justify', maxWidth:'100%'}}>
+                                    First of all, I really like working on <p style={{display:"inline", color:'#FE560C'}}>innovative things! </p>
+                                    This include writing a new piece of code with Python as well as trying a new recipe!!
+                        </p>
 
-                    <p class="FuturaFont" style={{color:'black', fontSize:'16px', textAlign:'justify', maxWidth:'100%'}}>
-                                First of all, I really like working on <p style={{display:"inline", color:'#FE560C'}}>innovative things! </p>
-                                This include writing a new piece of code with Python as well as trying a new recipe!!
-                    </p>
+                        <p class="roboto-font" style={{color:'black', fontSize:'16px', textAlign:'justify', maxWidth:'100%'}}>
+                                        I am fascinated about the idea of blockchain, cryptocurrency and the overall web3 concept. I believe Web3 especially 
+                                        <p style={{display:"inline", color:'#FE560C'}}> Defi and DAO </p>, have great potential,
+                                        and I can't wait to see what future holds!!
 
-                    <p class="FuturaFont" style={{color:'black', fontSize:'16px', textAlign:'justify', maxWidth:'100%'}}>
-                                    I am fascinated about the idea of blockchain, cryptocurrency and the overall web3 concept. I believe Web3 especially 
-                                     <p style={{display:"inline", color:'#FE560C'}}> Defi and DAO </p>, have great potential,
-                                    and I can't wait to see what future holds!!
+                        </p>
 
-                    </p>
+                        <p class="roboto-font" style={{color:'black', fontSize:'16px', textAlign:'justify', maxWidth:'100%'}}>
+                                I am very much interested in full stack development, Software development, cloud services and fundamental coding.
+                        </p>
 
-                    <p class="FuturaFont" style={{color:'black', fontSize:'16px', textAlign:'justify', maxWidth:'100%'}}>
-                               I am very much interested in full stack development, Software development, cloud services and fundamental coding.
-                    </p>
+                        <p class="roboto-font" style={{color:'black', fontSize:'16px', textAlign:'justify', maxWidth:'100%'}}>
+                                Before you take me as a complete nerd, I am interested in Football, Badminton and also wasting hours on Netflix!
+                                And people say I am quite a  <p style={{display:"inline", color:'#FE560C'}}> party person!! </p>
+                                And oh yes, I like to play guitar (not for a big audience though!)
+                        </p>
 
-                    <p class="FuturaFont" style={{color:'black', fontSize:'16px', textAlign:'justify', maxWidth:'100%'}}>
-                               Before you take me as a complete nerd, I am interested in Football, Badminton and also wasting hours on Netflix!
-                               And people say I am quite a  <p style={{display:"inline", color:'#FE560C'}}> party person!! </p>
-                               And oh yes, I like to play guitar (not for a big audience though!)
-                    </p>
+                        <p class="roboto-font" style={{color:'black', fontSize:'16px', textAlign:'justify', maxWidth:'100%'}}>
+                                    I also very much like to waste my time on playing the popular game Valorant (back to being a nerd &#128512; )
+                        </p>
 
-                    <p class="FuturaFont" style={{color:'black', fontSize:'16px', textAlign:'justify', maxWidth:'100%'}}>
-                                I also very much like to waste my time on playing the popular game Valorant (back to being a nerd &#128512; )
-                    </p>
+                        <div onClick={() => setSeeMore(0)}>
+                            <p>see less ...</p>
+                        </div>                        
+                    </Grid.Row>
 
-                    <div onClick={() => setSeeMore(0)}>
-                        <p>see less ...</p>
-                    </div>
-                        
+                    <Grid.Row centered>
+                        <a href='https://www.linkedin.com/in/zubayr-khalid-393257117/'>
+                            <Button color='black'>Get in Touch</Button>
+                        </a>
                     </Grid.Row>
                 
             </Grid>
@@ -120,45 +126,50 @@ function Myself() {
                 <Grid>
                     
                         <Grid.Row>
-                        <p class="FuturaFont" style={{color:'black', fontSize:'32px', textAlign:'justify', maxWidth:'100%'}}>
+                        <h1 class="roboto-font" style={{color:'black', fontSize:'32px', textAlign:'justify', maxWidth:'100%'}}>
                             Zubayr Khalid
-
-                        </p>
+                        </h1>
 
                         </Grid.Row>
 
                         <Grid.Row>
 
-                        <p class="FuturaFont" style={{color:'black', fontSize:'16px', textAlign:'justify', maxWidth:'100%'}}>
-                                    I am just a person crazy enough to be motivated by a lots of cool stuff. 
-                        </p>
+                            <p class="roboto-font" style={{color:'black', fontSize:'16px', textAlign:'justify', maxWidth:'100%'}}>
+                                        I am just a person crazy enough to be motivated by a lots of cool stuff. 
+                            </p>
 
-                        <p class="FuturaFont" style={{color:'black', fontSize:'16px', textAlign:'justify', maxWidth:'100%'}}>
-                                    First of all, I really like working on <p style={{display:"inline", color:'#FE560C'}}>innovative things! </p>
-                                    This include writing a new piece of code with Python as well as trying a new recipe!!
-                        </p>
+                            <p class="roboto-font" style={{color:'black', fontSize:'16px', textAlign:'justify', maxWidth:'100%'}}>
+                                        First of all, I really like working on <p style={{display:"inline", color:'#FE560C'}}>innovative things! </p>
+                                        This include writing a new piece of code with Python as well as trying a new recipe!!
+                            </p>
 
-                        <p class="FuturaFont" style={{color:'black', fontSize:'16px', textAlign:'justify', maxWidth:'100%'}}>
-                                    I am fascinated about the idea of blockchain, cryptocurrency and the overall web3 concept. I believe Web3 especially 
-                                     <p style={{display:"inline", color:'#FE560C'}}> Defi and DAO </p>, have great potential,
-                                    and I can't wait to see what future holds!!
+                            <p class="roboto-font" style={{color:'black', fontSize:'16px', textAlign:'justify', maxWidth:'100%'}}>
+                                        I am fascinated about the idea of blockchain, cryptocurrency and the overall web3 concept. I believe Web3 especially 
+                                        <p style={{display:"inline", color:'#FE560C'}}> Defi and DAO </p>, have great potential,
+                                        and I can't wait to see what future holds!!
 
-                        </p>
+                            </p>
 
-                        <p class="FuturaFont" style={{color:'black', fontSize:'16px', textAlign:'justify', maxWidth:'100%'}}>
-                                   I am also interested in full stack development, Software development, cloud services and fundamental coding.
-                        </p>
+                            <p class="roboto-font" style={{color:'black', fontSize:'16px', textAlign:'justify', maxWidth:'100%'}}>
+                                    I am also interested in full stack development, Software development, cloud services and fundamental coding.
+                            </p>
 
-                        <p class="FuturaFont" style={{color:'black', fontSize:'16px', textAlign:'justify', maxWidth:'100%'}}>
-                                   Before you take me as a complete nerd, I am interested in Football, Badminton and also wasting hours on Netflix!
-                                   And people say I am quite a  <p style={{display:"inline", color:'#FE560C'}}> party person!! </p>
-                                   And oh yes, I like to play guitar (not for a big audience though!)
-                        </p>
+                            <p class="roboto-font" style={{color:'black', fontSize:'16px', textAlign:'justify', maxWidth:'100%'}}>
+                                    Before you take me as a complete nerd, I am interested in Football, Badminton and also wasting hours on Netflix!
+                                    And people say I am quite a  <p style={{display:"inline", color:'#FE560C'}}> party person!! </p>
+                                    And oh yes, I like to play guitar (not for a big audience though!)
+                            </p>
 
-                        <p class="FuturaFont" style={{color:'black', fontSize:'16px', textAlign:'justify', maxWidth:'100%'}}>
-                                    I also very much like to waste my time on playing the popular game Valorant (back to being a nerd &#128512; )
-                        </p>
+                            <p class="roboto-font" style={{color:'black', fontSize:'16px', textAlign:'justify', maxWidth:'100%'}}>
+                                        I also very much like to waste my time on playing the popular game Valorant (back to being a nerd &#128512; )
+                            </p>
                             
+                        </Grid.Row>
+
+                        <Grid.Row centered>
+                            <a href='https://www.linkedin.com/in/zubayr-khalid-393257117/'>
+                                <Button color='black'>Get in Touch</Button>
+                            </a>
                         </Grid.Row>
                     
                 </Grid>
@@ -180,14 +191,14 @@ function Myself() {
 
             <Grid centered>
                 <Grid.Row>
-                    <p class="FuturaFont" style={{color:'black', fontSize:'24px', textAlign:'justify', maxWidth:'100%'}}>
+                    <p class="roboto-font" style={{color:'black', fontSize:'24px', textAlign:'justify', maxWidth:'100%'}}>
                         My Description
                     </p>
 
                 </Grid.Row>
 
                 <Grid.Row>
-                    <p class="FuturaFont" style={{color:'black', fontSize:'16px', textAlign:'justify', maxWidth:'100%'}}>
+                    <p class="roboto-font" style={{color:'black', fontSize:'16px', textAlign:'justify', maxWidth:'100%'}}>
                         Naahhh, I don't wanna waste your time on more textual descriptions. I have made this website from scratch with 
                         React js. I have included most of the stuff, such as interaction with 
                         <p style={{display:"inline", color:'#FE560C'}}> MERN</p>,
@@ -197,7 +208,7 @@ function Myself() {
 
                     </p>
 
-                    <p class="FuturaFont" style={{color:'black', fontSize:'16px', textAlign:'justify', maxWidth:'100%'}}>
+                    <p class="roboto-font" style={{color:'black', fontSize:'16px', textAlign:'justify', maxWidth:'100%'}}>
                         Just go through this website and you will have a brief idea about me &#128513;
                     </p>
                     

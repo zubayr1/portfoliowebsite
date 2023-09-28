@@ -43,7 +43,7 @@ const handleDownload = (arg) =>
 
             <Grid.Row centered only='computer tablet'>
                 <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', marginTop:'1%'}}>
-                    <p style={{color:'#FE560C', fontSize:'24px'}}> My Documents</p>
+                    <p className=" roboto-font" style={{color:'#FE560C', fontSize:'24px'}}> My Documents</p>
                 </div>
             </Grid.Row>
 

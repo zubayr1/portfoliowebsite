@@ -297,8 +297,8 @@ if (selectedSkillIndex===11)
 
 return (
     <div className="skill-description-container">
-        <div>
-            <p className="skill-description-text">Skill_Description</p>
+        <div style={{marginTop: "2%"}}>
+            <p className=" roboto-font skill-description-text">Skill Descriptions</p>
         </div>
 
         <div style={{padding: "2%"}}>

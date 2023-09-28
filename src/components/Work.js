@@ -6,7 +6,7 @@ function Work() {
   return (
     <div>
         <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', marginTop:'1%'}}>
-            <p style={{color:'#000000', fontSize:'24px'}}> My Best Work</p>
+            <p class="roboto-font" style={{color:'#000000', fontSize:'24px'}}> My Best Work</p>
         </div>
 
         
@@ -14,7 +14,7 @@ function Work() {
         <Grid>
             <Grid.Column only='computer tablet'>
                 <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', marginTop:'1%'}}>
-                    <p style={{color:'#000000', fontSize:'16px'}}> Here I showoff a bit on my best work so far. Please visit the site once!</p>
+                    <p class="roboto-font" style={{color:'#000000', fontSize:'16px'}}> Here I showoff a bit on my best work so far. Please visit the site once!</p>
                 </div>
                 
                 <div className="container">
